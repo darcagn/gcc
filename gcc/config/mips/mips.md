@@ -7976,23 +7976,23 @@
 ;;  Float point MIN/MAX
 ;;
 
-(define_insn "smin<mode>3"
-  [(set (match_operand:SCALARF 0 "register_operand" "=f")
-	(smin:SCALARF (match_operand:SCALARF 1 "register_operand" "f")
-		      (match_operand:SCALARF 2 "register_operand" "f")))]
-  "ISA_HAS_FMIN_FMAX"
-  "min.<fmt>\t%0,%1,%2"
-  [(set_attr "type" "fminmax")
-   (set_attr "mode" "<UNITMODE>")])
+;;(define_insn "smin<mode>3"
+;;  [(set (match_operand:SCALARF 0 "register_operand" "=f")
+;;	(smin:SCALARF (match_operand:SCALARF 1 "register_operand" "f")
+;;		      (match_operand:SCALARF 2 "register_operand" "f")))]
+;;  "ISA_HAS_FMIN_FMAX"
+;;  "min.<fmt>\t%0,%1,%2"
+;;  [(set_attr "type" "fminmax")
+;;   (set_attr "mode" "<UNITMODE>")])
 
-(define_insn "smax<mode>3"
-  [(set (match_operand:SCALARF 0 "register_operand" "=f")
-	(smax:SCALARF (match_operand:SCALARF 1 "register_operand" "f")
-		      (match_operand:SCALARF 2 "register_operand" "f")))]
-  "ISA_HAS_FMIN_FMAX"
-  "max.<fmt>\t%0,%1,%2"
-  [(set_attr "type" "fminmax")
-  (set_attr "mode" "<UNITMODE>")])
+;;(define_insn "smax<mode>3"
+;;  [(set (match_operand:SCALARF 0 "register_operand" "=f")
+;;	(smax:SCALARF (match_operand:SCALARF 1 "register_operand" "f")
+;;		      (match_operand:SCALARF 2 "register_operand" "f")))]
+;;  "ISA_HAS_FMIN_FMAX"
+;;  "max.<fmt>\t%0,%1,%2"
+;;  [(set_attr "type" "fminmax")
+;;  (set_attr "mode" "<UNITMODE>")])
 
 (define_insn "fmin<mode>3"
   [(set (match_operand:SCALARF 0 "register_operand" "=f")
